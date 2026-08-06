@@ -3,504 +3,90 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TechFriendlyUSA | Small Business Cybersecurity</title>
-<meta name="description" content="Quick, practical cybersecurity fixes for small businesses. No audits, no compliance packages, no retainer.">
-
+<title>TechFriendlyUSA | Practical IT & Security for Small Business</title>
+<meta name="description" content="Cybersecurity reviews, Microsoft 365 migrations, and outside IT advisory for small businesses. No retainers you didn't ask for.">
+<meta property="og:title" content="TechFriendlyUSA">
+<meta property="og:description" content="Cybersecurity reviews, Microsoft 365 migrations, and outside IT advisory for small businesses.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="TechFriendlyUSA | Small Business Cybersecurity">
-<meta property="og:description" content="Quick reviews, plain answers, no retainer. $200 flat review, fixes priced by scope.">
-<meta property="og:image" content="https://techfriendlyusa.com/og-image.png">
 <meta property="og:url" content="https://techfriendlyusa.com/">
-
+<meta property="og:image" content="https://techfriendlyusa.com/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="TechFriendlyUSA | Small Business Cybersecurity">
-<meta name="twitter:description" content="Quick reviews, plain answers, no retainer. $200 flat review, fixes priced by scope.">
-<meta name="twitter:image" content="https://techfriendlyusa.com/og-image.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --ink:#0E1524;
-    --ink-2:#161F35;
-    --ink-3:#212C46;
-    --paper:#EAE5D8;
-    --paper-2:#DFD9C8;
-    --amber:#E0A23B;
-    --teal:#4FAE96;
-    --text:#ECEDF1;
-    --text-muted:#9BA3B7;
-    --text-ink:#20263A;
-    --mono: 'IBM Plex Mono', monospace;
-    --sans: 'Inter', sans-serif;
-  }
-  *{box-sizing:border-box; margin:0; padding:0;}
-  html{scroll-behavior:smooth;}
-  body{
-    background:var(--ink);
-    color:var(--text);
-    font-family:var(--sans);
-    line-height:1.55;
-    -webkit-font-smoothing:antialiased;
-  }
-  a{color:inherit;}
-  .wrap{
-    max-width:1080px;
-    margin:0 auto;
-    padding:0 28px;
-  }
-  ::selection{background:var(--amber); color:var(--ink);}
-
-  a:focus-visible, button:focus-visible{
-    outline:2px solid var(--teal);
-    outline-offset:3px;
-  }
-
-  header.site{
-    padding:26px 0;
-    border-bottom:1px solid rgba(255,255,255,0.08);
-  }
-  .nav{
-    display:flex; align-items:center; justify-content:space-between;
-  }
-  .logo{
-    font-family:var(--mono);
-    font-weight:600;
-    font-size:1.05rem;
-    letter-spacing:0.02em;
-  }
-  .logo span{color:var(--amber);}
-  .nav a.cta-small{
-    font-family:var(--mono);
-    font-size:0.85rem;
-    border:1px solid rgba(255,255,255,0.25);
-    padding:8px 16px;
-    border-radius:3px;
-    text-decoration:none;
-    transition:border-color .2s ease, background .2s ease;
-  }
-  .nav a.cta-small:hover{
-    border-color:var(--teal);
-    background:rgba(79,174,150,0.08);
-  }
-
-  .hero{
-    padding:80px 0 60px;
-    display:grid;
-    grid-template-columns:1.05fr 0.95fr;
-    gap:56px;
-    align-items:center;
-  }
-  .eyebrow{
-    font-family:var(--mono);
-    font-size:0.78rem;
-    letter-spacing:0.14em;
-    text-transform:uppercase;
-    color:var(--amber);
-    margin-bottom:18px;
-  }
-  h1{
-    font-family:var(--sans);
-    font-weight:700;
-    font-size:clamp(2rem, 4vw, 2.9rem);
-    line-height:1.15;
-    letter-spacing:-0.01em;
-    margin-bottom:22px;
-  }
-  .hero p.sub{
-    color:var(--text-muted);
-    font-size:1.08rem;
-    max-width:46ch;
-    margin-bottom:30px;
-  }
-  .btn-primary{
-    display:inline-flex;
-    align-items:center;
-    gap:10px;
-    background:var(--teal);
-    color:#0B1B18;
-    font-weight:600;
-    font-size:0.98rem;
-    padding:14px 24px;
-    border-radius:4px;
-    text-decoration:none;
-    transition:transform .15s ease, box-shadow .15s ease;
-  }
-  .btn-primary:hover{
-    transform:translateY(-1px);
-    box-shadow:0 6px 20px rgba(79,174,150,0.25);
-  }
-  .hero-note{
-    margin-top:16px;
-    font-size:0.85rem;
-    color:var(--text-muted);
-  }
-
-  .scan-card{
-    background:var(--paper);
-    color:var(--text-ink);
-    border-radius:6px;
-    overflow:hidden;
-    box-shadow:0 30px 60px -20px rgba(0,0,0,0.55);
-    border:1px solid var(--paper-2);
-  }
-  .scan-head{
-    background:var(--text-ink);
-    color:var(--paper);
-    font-family:var(--mono);
-    font-size:0.82rem;
-    padding:12px 16px;
-    display:flex;
-    align-items:center;
-    gap:8px;
-  }
-  .dot{width:8px;height:8px;border-radius:50%;background:var(--amber);}
-  .cursor{
-    display:inline-block;
-    width:7px; height:14px;
-    background:var(--teal);
-    margin-left:2px;
-    animation:blink 1s steps(1) infinite;
-  }
-  @keyframes blink{50%{opacity:0;}}
-  @media (prefers-reduced-motion: reduce){
-    .cursor{animation:none;}
-  }
-  .scan-rows{
-    padding:6px 0;
-  }
-  .scan-row{
-    display:grid;
-    grid-template-columns:20px 1fr auto;
-    gap:12px;
-    align-items:start;
-    padding:12px 16px;
-    border-bottom:1px solid var(--paper-2);
-    font-size:0.92rem;
-  }
-  .scan-row:last-child{border-bottom:none;}
-  .mark{font-family:var(--mono); font-weight:600; font-size:1rem; line-height:1.4;}
-  .mark.ok{color:var(--teal);}
-  .mark.warn{color:var(--amber);}
-  .row-label{font-weight:600;}
-  .row-detail{
-    display:block;
-    color:#5B6172;
-    font-size:0.85rem;
-    font-weight:400;
-    margin-top:2px;
-  }
-  .row-status{
-    font-family:var(--mono);
-    font-size:0.72rem;
-    text-transform:uppercase;
-    letter-spacing:0.06em;
-    padding:3px 8px;
-    border-radius:3px;
-    align-self:center;
-    white-space:nowrap;
-  }
-  .row-status.ok{background:rgba(79,174,150,0.15); color:#2E7D68;}
-  .row-status.warn{background:rgba(224,162,59,0.18); color:#9C6A16;}
-  .scan-foot{
-    font-family:var(--mono);
-    font-size:0.78rem;
-    color:#5B6172;
-    padding:12px 16px;
-    background:var(--paper-2);
-  }
-
-  section{padding:70px 0;}
-  .section-label{
-    font-family:var(--mono);
-    font-size:0.78rem;
-    letter-spacing:0.14em;
-    text-transform:uppercase;
-    color:var(--amber);
-    margin-bottom:14px;
-  }
-  h2{
-    font-size:clamp(1.5rem, 3vw, 2rem);
-    font-weight:700;
-    margin-bottom:16px;
-    letter-spacing:-0.01em;
-  }
-  .lede{
-    color:var(--text-muted);
-    max-width:60ch;
-    margin-bottom:44px;
-    font-size:1.02rem;
-  }
-
-  .missed-grid{
-    display:grid;
-    grid-template-columns:repeat(3, 1fr);
-    gap:1px;
-    background:rgba(255,255,255,0.08);
-    border:1px solid rgba(255,255,255,0.08);
-    border-radius:6px;
-    overflow:hidden;
-  }
-  .missed-item{
-    background:var(--ink-2);
-    padding:26px 24px;
-  }
-  .missed-item h3{
-    font-family:var(--mono);
-    font-size:0.98rem;
-    font-weight:600;
-    margin-bottom:10px;
-    color:var(--text);
-  }
-  .missed-item p{
-    font-size:0.9rem;
-    color:var(--text-muted);
-  }
-
-  .who{
-    background:var(--ink-2);
-    border-radius:8px;
-    padding:44px;
-    border:1px solid rgba(255,255,255,0.06);
-  }
-  .who p{
-    font-size:1.05rem;
-    max-width:68ch;
-    color:var(--text);
-  }
-  .who p + p{margin-top:16px; color:var(--text-muted); font-size:0.98rem;}
-
-  .steps{
-    display:grid;
-    grid-template-columns:repeat(3, 1fr);
-    gap:36px;
-  }
-  .step{
-    border-top:2px solid var(--teal);
-    padding-top:18px;
-  }
-  .step .num{
-    font-family:var(--mono);
-    color:var(--amber);
-    font-size:0.85rem;
-    margin-bottom:10px;
-  }
-  .step h3{
-    font-size:1.08rem;
-    font-weight:600;
-    margin-bottom:10px;
-  }
-  .step p{
-    color:var(--text-muted);
-    font-size:0.94rem;
-  }
-
-  .contact{
-    background:linear-gradient(135deg, var(--ink-3), var(--ink-2));
-    border-radius:10px;
-    padding:56px;
-    text-align:center;
-    border:1px solid rgba(255,255,255,0.08);
-  }
-  .contact h2{margin-bottom:12px;}
-  .contact p{
-    color:var(--text-muted);
-    max-width:50ch;
-    margin:0 auto 30px;
-  }
-  .contact .btn-primary{font-size:1.05rem; padding:16px 30px;}
-
-  footer.site{
-    padding:32px 0 50px;
-    color:var(--text-muted);
-    font-size:0.85rem;
-    font-family:var(--mono);
-  }
-
-  .reveal{
-    opacity:0;
-    transform:translateY(14px);
-    transition:opacity .6s ease, transform .6s ease;
-  }
-  .reveal.in{opacity:1; transform:none;}
-  @media (prefers-reduced-motion: reduce){
-    .reveal{opacity:1; transform:none; transition:none;}
-  }
-
-  @media (max-width: 880px){
-    .hero{grid-template-columns:1fr; padding-top:56px;}
-    .missed-grid{grid-template-columns:1fr;}
-    .steps{grid-template-columns:1fr; gap:28px;}
-    .who{padding:30px;}
-    .contact{padding:38px 26px;}
-  }
-</style>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<header class="site">
-  <div class="wrap nav">
-    <div class="logo">TechFriendly<span>USA</span></div>
-    <a class="cta-small" href="mailto:info@techfriendlyusa.com">Email me</a>
+<header class="site-header">
+  <div class="wrap">
+    <div class="brand">TechFriendly<span class="dot">USA</span></div>
+    <nav class="site-nav">
+      <a href="/cybersecurity.html">Cybersecurity</a>
+      <a href="/m365-migration.html">M365 Migration</a>
+      <a href="/it-advisory.html">IT Advisory</a>
+    </nav>
+    <a class="btn-contact" href="mailto:info@techfriendlyusa.com">Email me</a>
   </div>
 </header>
 
-<div class="wrap">
-  <section class="hero">
-    <div>
-      <div class="eyebrow">Small Business Cybersecurity</div>
-      <h1>Most small businesses get hit because of something nobody ever checked.</h1>
-      <p class="sub">I review the setup most owners never have time for, tell you plainly what's exposed, and fix what needs fixing. No audit reports, no compliance packages, no monthly retainer.</p>
-      <a class="btn-primary" href="mailto:info@techfriendlyusa.com">Email me</a>
-      <div class="hero-note">Reviews start at $200.</div>
-    </div>
-
-    <div class="scan-card">
-      <div class="scan-head">
-        <span class="dot"></span>
-        checking techfriendlyusa.com<span class="cursor"></span>
-      </div>
-      <div class="scan-rows">
-        <div class="scan-row">
-          <span class="mark ok">✓</span>
-          <div>
-            <span class="row-label">Website security</span>
-            <span class="row-detail">Certificate valid</span>
-          </div>
-          <span class="row-status ok">Clean</span>
-        </div>
-        <div class="scan-row">
-          <span class="mark warn">✗</span>
-          <div>
-            <span class="row-label">Email authentication</span>
-            <span class="row-detail">Incomplete setup</span>
-          </div>
-          <span class="row-status warn">Exposed</span>
-        </div>
-        <div class="scan-row">
-          <span class="mark warn">△</span>
-          <div>
-            <span class="row-label">Login security</span>
-            <span class="row-detail">Not fully enforced</span>
-          </div>
-          <span class="row-status warn">Weak</span>
-        </div>
-        <div class="scan-row">
-          <span class="mark warn">✗</span>
-          <div>
-            <span class="row-label">System updates</span>
-            <span class="row-detail">Falling behind</span>
-          </div>
-          <span class="row-status warn">Exposed</span>
-        </div>
-      </div>
-      <div class="scan-foot">This is the kind of thing I check. Takes about 15 minutes.</div>
-    </div>
-  </section>
-</div>
-
-<div class="wrap">
-  <section class="reveal">
-    <div class="section-label">What Usually Gets Missed</div>
-    <h2>The small stuff that causes the big problems</h2>
-    <p class="lede">None of it is exotic. It's basic upkeep that gets skipped because checking isn't anyone's actual job.</p>
-
-    <div class="missed-grid">
-      <div class="missed-item">
-        <h3>Email authentication</h3>
-        <p>The setup that decides whether someone can send email pretending to be you.</p>
-      </div>
-      <div class="missed-item">
-        <h3>Login security</h3>
-        <p>How much it takes to get into your accounts if a password leaks.</p>
-      </div>
-      <div class="missed-item">
-        <h3>System updates</h3>
-        <p>Whether your machines are still getting security patches.</p>
-      </div>
-      <div class="missed-item">
-        <h3>Access control</h3>
-        <p>Who can get into what, and whether that list is still accurate.</p>
-      </div>
-      <div class="missed-item">
-        <h3>Backup verification</h3>
-        <p>Whether your backups actually work when you need them to.</p>
-      </div>
-      <div class="missed-item">
-        <h3>Network exposure</h3>
-        <p>What's visible from the outside that shouldn't be.</p>
-      </div>
-    </div>
-  </section>
-</div>
-
-<div class="wrap">
-  <section class="reveal">
-    <div class="section-label">Who This Is For</div>
-    <h2>Big enough to be a target, too small to have IT security</h2>
-    <div class="who">
-      <p>You've got 5 to 50 employees and real revenue. Enough that a bad week would actually cost you something. Maybe you've got an IT person or a managed provider. They keep the lights on, patch what breaks, and answer the phone. Security review usually isn't part of that.</p>
-      <p>This fills that specific gap, for less than hiring someone full time, without turning into an ongoing program you didn't ask for.</p>
-    </div>
-  </section>
-</div>
-
-<div class="wrap">
-  <section class="reveal">
-    <div class="section-label">How It Works</div>
-    <h2>Three steps, no retainer</h2>
-    <div class="steps">
-      <div class="step">
-        <div class="num">01</div>
-        <h3>Quick review</h3>
-        <p>I check your domain and email setup, then a short call to understand how your systems and accounts are actually managed day to day.</p>
-      </div>
-      <div class="step">
-        <div class="num">02</div>
-        <h3>Findings</h3>
-        <p>$200 flat gets you a plain list of what's exposed and why it matters. No jargon.</p>
-      </div>
-      <div class="step">
-        <div class="num">03</div>
-        <h3>Fix</h3>
-        <p>I fix what you want fixed. Priced separately based on the scope, not a subscription you forget you're paying for.</p>
-      </div>
-    </div>
-  </section>
-</div>
-
-<div class="wrap">
-  <section class="reveal">
-    <div class="contact">
-      <h2>Curious what shows up for your business?</h2>
-      <p>A $200 review gets you a plain list of what's exposed. Fixing it is priced separately based on what needs to be done.</p>
-      <a class="btn-primary" href="mailto:info@techfriendlyusa.com">Email me</a>
-    </div>
-  </section>
-</div>
-
-<footer class="site">
+<section class="hero" style="border-bottom:1px solid var(--border);">
   <div class="wrap">
-    TechFriendlyUSA. Small business cybersecurity.
+    <div class="file-tag"><span class="glyph">●</span> TECHFRIENDLYUSA — INDEX</div>
+    <h1>Outside technical help, sized for a business too small for its own IT department.</h1>
+    <p class="lede">I work with owners and small teams who don't have (or don't need) full-time IT staff. Pick the kind of help you're after below — each one is a plain look at what you've got and what to do about it.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="grid grid-3">
+
+      <a class="service-tile" href="/cybersecurity.html">
+        <div class="index">01 — SECURITY</div>
+        <h3>Cybersecurity Review</h3>
+        <p>I check your domain, email, and account setup, then tell you plainly what's exposed and fix what needs fixing.</p>
+        <div class="go">View service →</div>
+      </a>
+
+      <a class="service-tile" href="/m365-migration.html">
+        <div class="index">02 — MIGRATION</div>
+        <h3>Microsoft 365 Migration & Setup</h3>
+        <p>Moving to M365 for the first time, or cleaning up a tenant that was never set up right. One project, done properly.</p>
+        <div class="go">View service →</div>
+      </a>
+
+      <a class="service-tile" href="/it-advisory.html">
+        <div class="index">03 — ADVISORY</div>
+        <h3>IT Advisory</h3>
+        <p>An outside technical voice for planning, vendor decisions, and the questions your team can't answer in-house.</p>
+        <div class="go">View service →</div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="file-tag"><span class="glyph">●</span> NOT SURE WHICH</div>
+      <h2>Not sure what you need?</h2>
+      <p>That's fine, most people aren't. Send me a line about what's going on and I'll point you at the right thing, or tell you if it's outside what I do.</p>
+    </div>
+    <div class="cta-band">
+      <div>
+        <h2>Tell me what's going on.</h2>
+        <p>One email, plain language. I'll get back to you with next steps.</p>
+      </div>
+      <a class="btn-primary" href="mailto:info@techfriendlyusa.com">Email me</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>TechFriendlyUSA</span>
+    <a href="mailto:info@techfriendlyusa.com">info@techfriendlyusa.com</a>
   </div>
 </footer>
-
-<script>
-  const items = document.querySelectorAll('.reveal');
-  if ('IntersectionObserver' in window){
-    const io = new IntersectionObserver((entries)=>{
-      entries.forEach(e=>{
-        if(e.isIntersecting){
-          e.target.classList.add('in');
-          io.unobserve(e.target);
-        }
-      });
-    }, {threshold:0.15});
-    items.forEach(i=>io.observe(i));
-  } else {
-    items.forEach(i=>i.classList.add('in'));
-  }
-</script>
 
 </body>
 </html>
